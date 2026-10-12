@@ -1,0 +1,98 @@
+/* Universal Selector & Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f3f6;
+    color: #212121;
+    line-height: 1.6;
+}
+
+/* Flipkart-inspired Header Navbar */
+header {
+    background: linear-gradient(135deg, #2874f0, #1656c5);
+    color: #ffffff;
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-area h1 {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 800;
+    color: #ffe11b;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active-nav {
+    color: #ffe11b;
+}
+
+.main-content {
+    padding: 30px 5%;
+    min-height: 80vh;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2874f0;
+    border-bottom: 3px solid #ffe11b;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background: #172337;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

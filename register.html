@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluora - Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-card { background: white; max-width: 550px; margin: 0 auto; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #333; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 15px; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #2874f0; outline: none; }
+        .submit-btn { background: #2874f0; color: white; border: none; width: 100%; padding: 12px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
+        .submit-btn:hover { background: #1656c5; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <h1>Bluora</h1>
+            <span style="font-size: 12px; color: #ffe11b; font-style: italic;">Explore Plus</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="collections.html"><i class="fa-solid fa-shirt"></i> Collections</a></li>
+                <li><a href="orders.html"><i class="fa-solid fa-box-open"></i> Orders</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+                <li><a href="register.html" class="active-nav"><i class="fa-solid fa-user-plus"></i> Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="form-card">
+            <h2 class="section-title" style="margin-bottom: 20px;">Customer Registration</h2>
+            <form onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="reg-name">Full Name</label>
+                    <input type="text" id="reg-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone">Phone Number</label>
+                    <input type="tel" id="reg-phone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-gender">Gender</label>
+                    <select id="reg-gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reg-address">Delivery Address</label>
+                    <textarea id="reg-address" rows="3" placeholder="Enter your complete street address and PIN code" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Register & Proceed</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bluora Online Shopping. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            alert(`Registration successful! Welcome to Bluora, ${name}.`);
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
