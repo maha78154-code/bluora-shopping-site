@@ -53,9 +53,6 @@ Bluora-Shopping-Website/
 3. Open `index.html` in your web browser.
 4. Explore the Bluora fashion shopping homepage.
 
-## 🌐 Live Demo
-
-Coming soon! The website can be published using GitHub Pages.
 
 ## 🎯 Project Objective
 
