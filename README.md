@@ -74,7 +74,8 @@ Mahalashmi R
 
 GitHub: https://github.com/maha78154-code
 
-
+Live demo 
+https://bluora-shopping-site-main-8ai55l6fs-mahagmailcom.vercel.app/
 
 This project is created for educational and portfolio purposes.
 
